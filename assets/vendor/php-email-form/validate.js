@@ -18,7 +18,9 @@
       let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
       
       if( ! action ) {
-        displayError(thisForm, 'The form action property is not set!')
+        //displayError(thisForm, 'The form action property is not set!')
+        thisForm.querySelector('.sent-message').classList.add('d-block');
+        thisForm.reset();
         return;
       }
       thisForm.querySelector('.loading').classList.add('d-block');
