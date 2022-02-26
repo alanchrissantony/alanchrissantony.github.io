@@ -58,7 +58,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link active" href="#header">Home</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#about" onclick="age()">About</a></li>
           <li><a class="nav-link" href="#resume">Resume</a></li>
           <li><a class="nav-link" href="#Projects">Projects</a></li>
           <!-- <li><a class="nav-link" href="#portfolio">Portfolio</a></li> -->
@@ -110,7 +110,7 @@
             </div>
             <div class="col-lg-6">
               <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id="age"></span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>alanchrissantony@gmail.com</span></li>
               </ul>
@@ -867,6 +867,31 @@
     <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
     
   </div>
+
+  <script>
+      function age() {
+          var d1 = '15';
+          var m1 = '12';
+          var y1 = '2000';
+          var date = new Date();
+          var d2 = date.getDate();
+          var m2 = 1 + date.getMonth();
+          var y2 = date.getFullYear();
+          var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+          if (d1 > d2) {
+              d2 = d2 + month[m2 - 1];
+              m2 = m2 - 1;
+          }
+          if (m1 > m2) {
+              m2 = m2 + 12;
+              y2 = y2 - 1;
+          }
+          var d = d2 - d1;
+          var m = m2 - m1;
+          var y = y2 - y1;
+          document.getElementById('age').innerHTML =  y;
+      }  
+  </script>
 
   <script>
     $("#submit-form").submit((e)=>{
