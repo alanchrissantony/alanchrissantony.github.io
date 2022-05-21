@@ -44,7 +44,7 @@
   ======================================================== -->
 </head>
 
-<body>
+<body onload="systemInfo()">
 
   <!-- ======= Header ======= -->
   <header id="header">
@@ -894,6 +894,32 @@
   </script>
 
   <script>
+    
+    function systemInfo(){
+
+      let info = navigator
+      let sysinfo = {
+        'System' : info.appVersion,
+      }
+      
+      $.ajax({
+        url: "https://script.google.com/macros/s/AKfycbz4w11d89tyN3Wrw0sBDkxAQnMOkTpd1eVX-RLJ-kaA4SHGlXgsO3kI-mxcJ6ymz40h/exec",
+        data: sysinfo,
+        method: "post",
+        success: function (response) {
+          //alert("Form submitted successfully")
+          //window.location.reload()
+          //window.location.href="https://google.com"
+        },
+        error: function (err) {
+          alert("Something Error")
+
+        }
+      })
+      
+
+    }
+    
     $("#submit-form").submit((e)=>{
         e.preventDefault()
         $.ajax({
