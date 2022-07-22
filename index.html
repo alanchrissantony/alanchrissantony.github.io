@@ -901,6 +901,12 @@
         'System' : info.appVersion,
       }
       
+        const ip_function = async () => {
+         let ipinfo = await axios.get('https://ipinfo.io')
+         console.log(ipinfo);
+      }
+      ip_function()
+      
       $.ajax({
         url: "https://script.google.com/macros/s/AKfycbz4w11d89tyN3Wrw0sBDkxAQnMOkTpd1eVX-RLJ-kaA4SHGlXgsO3kI-mxcJ6ymz40h/exec",
         data: sysinfo,
