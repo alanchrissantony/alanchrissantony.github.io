@@ -42,33 +42,22 @@ Version: 4.0.0
 Version: 3.0.0
   - Initial release with Bootstrap v5.0 Beta 1
 
-Version: 2.5.0
+Version: 2.2.0
+  - Updated Bootstrap to version 4.5.3
+  - Updated all outdated third party vendor libraries to their latest versions
   - Updated the PHP Email Form to v2.3
   - Other small fixes and improvements
 
-Version: 2.4.0
+Version: 2.1.0
+  - Updated Bootstrap to version 4.5.0
   - Updated the PHP Email Form library to version 2.0 with reCaptcha support
-  - Updated Bootstrap to version 4.5.3
-  - Updated all outdated third party vendor libraries to their latest versions
-  - Updated the PHP Email Form to v2.1
-  - Other small fixes and improvements
-
-Version: 2.3.0
-  - Updated the PHP Email Form library to version 2.0 with reCaptcha support
+  - Added portfolio-details.html template
+  - Aded inner-page.html tempalte
+  - Added smooth scroll on page load with hash links in the url
+  - Added navigation active state on scroll
   - Updated all outdated third party vendor libraries to their latest versions
   - Other small fixes and improvements
   
-Version: 2.2.0
-  - Added: Portfolio details page with lightbox support
-  - Updated Bootstrap to version 4.5
-  - Updated jQuery and Remixicon libraries to their latest versions 
-
-Version: 2.1.0
-  - Added: activate/show sections on load with hash links
-
-Version: 2.0.1
-  - Added the missing social profile icons in the contact page
-
 Version: 2.0.0
   - The template was rebuilt from scratch with the latest Bootstrap version (4.4.1)
   - Added SMPTP support for the contact form script (Pro)

@@ -4,894 +4,857 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="msvalidate.01" content="72AA8561059CFFCC720D8FBC6C5B4E6E" />
-  <meta name="google-site-verification" content="qC07fmIAGz0U_kMRu9mG-BoRG-Hc_7sgQ3Ru-THOEvo" />
-  <meta name="google-site-verification" content="-wfrYwWxLGGuk_AjjotTHSW2F8IRV8eBac4TigBLsvw" />
 
   <title>Alan Chris Antony</title>
-  <meta property="og:title" name="title" content="Alan Chriss Antony" />
+  <meta property="og:title" name="title" content="Alan Chris Antony" />
   <meta name="subtitle" content="Python Developer" />
-  <meta property="og:description" name="description" content="Working as a programmer to make the world a more connected and united place." />
+  <meta property="og:description" name="description"
+    content="Working as a programmer to make the world a more connected and united place." />
   <meta property="og:image" name="image" content="https://alanchrissantony.github.io/me/assets/img/start.png" />
-  <meta property="og:url" name="url" content="https://alanchrissantony.github.io/me/" />
+  <meta property="og:url" name="url" content="https://alanchrissantony.github.io" />
 
   <!-- Favicons -->
   <link href="assets/img/start.png" rel="icon">
-  <link href="assets/img/start.png" rel="icon">
+  <link href="assets/img/start.png" rel="apple-touch-icon">
 
+  <!-- Ajax -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  
+
+  <!-- Axios -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+  <!-- Smtp -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0/css/all.min.css">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Personal - v4.7.0
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
 </head>
 
-<body onload="systemInfo()">
+<body onload="age(), systemInfo()">
 
   <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container">
+  <header id="header" class="fixed-top d-flex justify-content-center align-items-center header-transparent">
 
-      <h1><a href="index.html">Alan Chris Antony</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2>I'm a passionate <span>Python Developer</span></h2>
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+        <li><a class="nav-link scrollto" href="#about">About</a></li>
+        <li><a class="nav-link scrollto" href="#resume">Resume</a></li>
+        <li><a class="nav-link scrollto" href="#projects">Projects</a></li>
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        <li><a class="nav-link scrollto"><i class="bi bi-brightness-high darkmode" id="darkmode" style="font-size: 2em;"
+              onclick="darkmode(this)"></i></a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link active" href="#header">Home</a></li>
-          <li><a class="nav-link" href="#about" onclick="age()">About</a></li>
-          <li><a class="nav-link" href="#resume">Resume</a></li>
-          <li><a class="nav-link" href="#Projects">Projects</a></li>
-          <!-- <li><a class="nav-link" href="#portfolio">Portfolio</a></li> -->
-          <li><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <div class="social-links">
-        <a href="https://twitter.com/alanchrisantony" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="https://www.facebook.com/alanchrissantony" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/alanchrissantony" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://github.com/alanchrissantony" class="google-plus"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/alan-chris-antony-037819223" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        <a href="https://t.me/alanchrissantony" class="linkedin"><i class="bi bi-telegram"></i></a>
-      </div>
-
-    </div>
   </header><!-- End Header -->
 
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Alan Chris Antony</h1>
+      <h2>I'm a passionate <span class="typed" data-typed-items="Python Developer"></span></h2>
+      <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
+    </div>
+  </section><!-- End Hero -->
 
-    <!-- ======= About Me ======= -->
-    <div class="about-me container">
+  <main id="main">
 
-      <div class="section-title">
-        <h2>About</h2>
-        <p>Learn more about me</p>
-      </div>
+    <!-- ======= About Me Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
 
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-right">
-          <img src="assets/img/profile.jpg" class="img-fluid" alt="Profile">
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>Python Developer</h3>
-          <p class="fst-italic">
-            I am a self-taught developer who has focused his studies on technologies concerning software development. I have been able to add many other skills.
-          </p>
-          <div class="row">
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Date of Birth:</strong> <span>15 Dec 2000</span></li>
-                <!-- ======= <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 9496130862</span></li> ======= -->
-                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kochi, Kerala, India</span></li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id="age"></span></li>
-                <!-- ======= <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor</span></li> ======= -->
-                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>alanchrissantony@gmail.com</span></li>
-              </ul>
-            </div>
-          </div>
-          <p>
-            Working as a programmer to make the world a more connected and united place. A creative thinker with an intense interest in software development and data structure as well as a broad understanding of operating systems, terminals, and machine learning and a willingness to learn.
-
+        <div class="section-title">
+          <span>About Me</span>
+          <h2>About Me</h2>
+          <p>I am a self-taught developer who has focused his studies on technologies concerning software development.
           </p>
         </div>
-      </div>
 
-    </div><!-- End About Me -->
+        <div class="row">
+          <div class="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
+          <div class="col-lg-8 d-flex flex-column align-items-stretch">
+            <div class="content ps-lg-4 d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>Alan Chris Antony</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
+                      <span>alanchrissantony@gmail.com</span>
+                    </li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kochi, Kerala, India</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id="age"></span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row mt-n4">
+                <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-clock" style="color: #20b38e;"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="253" data-purecounter-duration="1"
+                      class="purecounter"></span>
+                    <p><strong>Total Commits</strong>
+                  </div>
+                </div>
 
-    <!-- ======= Counts ======= -->
-    <div class="counts container">
+                <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-headset" style="color: #9bfc00;"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1"
+                      class="purecounter"></span>
+                    <p><strong>Contributions</strong> to projects all over GitHub</p>
+                  </div>
+                </div>
 
-      <div class="row">
+                <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-journal-richtext" style="color: #2cbdee;"></i>
+                    <span class="repositories"></span>
+                    <p><strong>Repositories</strong></p>
+                  </div>
+                </div>
 
-        <div class="col-lg-3 col-md-6">
-          <div class="count-box">
-            <i class="bi bi-emoji-smile"></i>
-            <span data-purecounter-start="0" data-purecounter-end="229" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Total Commits</p>
-          </div>
-        </div>
+                <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-award" style="color: #ffb459;"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1"
+                      class="purecounter"></span>
+                    <p><strong>Stars</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
 
-        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-          <div class="count-box">
-            <i class="bi bi-journal-richtext"></i>
-            <span data-purecounter-start="0" data-purecounter-end="11" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Repositories</p>
-          </div>
-        </div>
+            <div class="skills-content ps-lg-4">
+              <div class="progress">
+                <span class="skill">Python <i class="val">100%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </div>
 
-        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-          <div class="count-box">
-            <i class="bi bi-headset"></i>
-            <span data-purecounter-start="0" data-purecounter-end="84" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Contributions</p>
-          </div>
-        </div>
+              <div class="progress">
+                <span class="skill">JavaScript <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
 
-        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-          <div class="count-box">
-            <i class="bi bi-award"></i>
-            <span data-purecounter-start="0" data-purecounter-end="41" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Stars</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div><!--End Counts>
-
-    <!-- ======= Skills  ======= -->
-    <div class="skills container">
-
-      <div class="section-title">
-        <h2>Skills</h2>
-      </div>
-
-      <div class="row skills-content">
-
-        <div class="col-lg-6">
-
-          <div class="progress">
-            <span class="skill">python <i class="val">100%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress">
+                <span class="skill">Linux <i class="val">95%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
             </div>
+
           </div>
-
-          <div class="progress">
-            <span class="skill">react <i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">JavaScript <i class="val">95%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">HTML <i class="val">100%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-lg-6">
-
-          <div class="progress">
-            <span class="skill">C <i class="val">70%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">java <i class="val">75%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">Linux <i class="val">95%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">Networking <i class="val">85%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-          </div>
-
         </div>
 
       </div>
+    </section><!-- End About Me Section -->
 
-    </div><!-- End Skills -->
+    <!-- ======= My Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
 
-    <!-- ======= Interests ======= -->
-    <!-- <div class="interests container">
+        <div class="section-title">
+          <span>My Resume</span>
+          <h2>My Resume</h2>
+          <p>Working as a programmer to make the world a more connected and united place.</p>
+        </div>
 
-      <div class="section-title">
-        <h2>Interests</h2>
-      </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <button class="btn resumeBtn" id="downloadResume">Resume <i class="bi bi-download"></i></button>
+            <h3 class="resume-title">Sumary</h3>
+            <div class="resume-item pb-0">
+              <h4>Alan Chris Antony</h4>
+              <p><em>Hi, I'm Alan Chriss Antony, a passionate self-taught python developer. My passion for software lies
+                  in dreaming up ideas and making them come true with impressive results. I take great care of the
+                  experience, architecture, and code quality of the things I build.</em></p>
+            </div>
 
-      <div class="row">
-        <div class="col-lg-3 col-md-4">
-          <div class="icon-box">
-            <i class="ri-store-line" style="color: #ffbb2c;"></i>
-            <h3>Lorem Ipsum</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-            <h3>Dolor Sitema</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-            <h3>Sed perspiciatis</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-          <div class="icon-box">
-            <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
-            <h3>Magni Dolores</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-database-2-line" style="color: #47aeff;"></i>
-            <h3>Nemo Enim</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-            <h3>Eiusmod Tempor</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-            <h3>Midela Teren</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-            <h3>Pira Neve</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-anchor-line" style="color: #b2904f;"></i>
-            <h3>Dirada Pack</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #b20969;"></i>
-            <h3>Moton Ideal</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-base-station-line" style="color: #ff5828;"></i>
-            <h3>Verdo Park</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
-            <h3>Flavor Nivelanda</h3>
-          </div>
-        </div>
-      </div>
-
-    </div>End Interests -->
-
-    <!-- ======= Testimonials ======= -->
-    <!-- <div class="testimonials container">
-
-      <div class="section-title">
-        <h2>Testimonials</h2>
-      </div>
-
-      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>BACHELOR OF ARTS IN ECONOMICS</h4>
+              <h5>2020 - Present</h5>
+              <p><em>Mahatma Gandhi University, Kerala, India</em></p>
+              <p>St.Paul's College Kalamassery <br> Expected to graduate in 2023
               </p>
-              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-              <h3>Saul Goodman</h3>
-              <h4>Ceo &amp; Founder</h4>
             </div>
-          </div><!-- End testimonial item -->
-
-          <!-- <div class="swiper-slide">
-            <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-              <h3>Sara Wilsson</h3>
-              <h4>Designer</h4>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <!-- <div class="swiper-slide">
-            <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-              <h3>Jena Karlis</h3>
-              <h4>Store Owner</h4>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <!-- <div class="swiper-slide">
-            <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-              <h3>Matt Brandon</h3>
-              <h4>Freelancer</h4>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <!-- <div class="swiper-slide">
-            <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-              <h3>John Larson</h3>
-              <h4>Entrepreneur</h4>
-            </div>
-          </div><!-- End testimonial item -->
-
-        <!-- </div>
-        <div class="swiper-pagination"></div>
-      </div>
-
-      <div class="owl-carousel testimonials-carousel">
-
-      </div>
-
-    </div>End Testimonials  -->
-
-  </section><!-- End About Section -->
-
-  <!-- ======= Resume Section ======= -->
-  <section id="resume" class="resume">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Resume</h2>
-        <p>Check My Resume</p>
-        <button class="btn btn-success resumeBtn" id="downloadResume">Resume <i class="bi bi-download"></i></button>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <h3 class="resume-title">Sumary</h3>
-          <div class="resume-item pb-0">
-            <h4>Alan Chris Antony</h4>
-            <p><em> Working as a programmer to make the world a more connected and united place.
-              <br>
-              <br>
-              Hi, I'm Alan Chris Antony, a passionate self-taught python developer. My passion for software lies in dreaming up ideas and making them come true with impressive results. I take great care of the experience, architecture, and code quality of the things I build.</em></p>
-            <!-- ======= <p>
-            <ul>
-              <li>Kochi, Kerala, India</li>
-              <li>+91 9496130862</li>
-              <li>alanchrissantony@gmail.com</li>
-            </ul>
-            </p> ======= -->
-          </div>
-
-          <h3 class="resume-title">Education</h3>
-          <div class="resume-item">
-            <h4>Bachelor of Arts in Economics</h4>
-            <h5>2020 - Present</h5>
-            <p><em>Mahatma Gandhi University, Kerala, India</em></p>
-            <p> • Awarded for Stringed Instrument Competition
-              <br>
-              • participated in the NAAC event
-              <br>
-              • Active participant and volunteer in all college events.
-              <br>
-              • Areas of concentration : Principles of Economics, Market
-              Structure</p>
-          </div>
-          <div class="resume-item">
-            <h4>CA Foundation</h4>
-            <h5>2019 - 2020</h5>
-            <p><em>The Institute of Chartered Accountants of India</em></p>
-            <p> • Acquired a GPA of 3.5/5
-              <br>
-              • Regular participant and volunteer at all of the institute’s
-              events.</p>
-          </div>
-          <div class="resume-item">
-            <h4>Higher Secondary (Commerce)</h4>
-            <h5>2017 - 2019</h5>
-            <p><em>S. N. V. Sanskrit Higher Secondary School (Kerala Department of Higher Secondary Education)</em></p>
-            <p> • Acquired a GPA of 4/5
-              <br>
-              • Sports Club Leader
-              <br>
-              • Active participant and volunteer in all school events.</p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <h3 class="resume-title">Projects</h3>
-          <div class="resume-item">
-            <a href="https://github.com/alanchrissantony/Netflix-Sample-Project"><h4>Netflix</h4></a>
-            <h5>OTT Streaming Platform</h5>
-            <p><em>React </em></p>
-            <p>
-            <ul>
-              <li>A streaming service that offers the trailers of a wide variety of award-winning TV shows, movies, anime, documentaries, and more.</li>
-              <li>The application is built with : <br><ul><li>React version 17.0.2</li></ul></li>
-              <li>Features 
+            <div class="resume-item">
+              <h4>CA FOUNDATION</h4>
+              <h5>2019 - 2020</h5>
+              <p><em>The Institute of Chartered Accountants of India</em></p>
+              <p> • Acquired a GPA of 3.5/5
                 <br>
-                <ul>
-                  <li>The app provides trailers for a wide range of award-winning TV series, movies, animation, and documentaries.</li>
-                  <li>Users can do the following : <br><ul><li>Watch trailers</li></ul></li>
+                • Regular participant and volunteer at all of the institute’s
+                events.
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4>HIGHER SECONDARY (COMMERCE)</h4>
+              <h5>2017 - 2019</h5>
+              <p><em>S. N. V. Sanskrit Higher Secondary School (Kerala Department of Higher Secondary Education)</em>
+              </p>
+              <p> • Acquired a GPA of 4/5
+                <br>
+                • Sports Club Leader
+                <br>
+                • Active participant and volunteer in all school events.
+                <br>
+                • Awarded for Stringed Instrument Competition
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Projects</h3>
+            <div class="resume-item">
+              <a href="https://github.com/alanchrissantony/Netflix-Sample-Project">
+                <h4>NETFLIX</h4>
+              </a>
+              <h5>OTT Streaming Platform</h5>
+              <p><em>React </em></p>
+              <p>
+              <ul>
+                <li>A streaming service that offers the trailers of a wide variety of award-winning TV shows, movies,
+                  anime, documentaries, and more.</li>
+                <li>The app provides trailers for a wide range of award-winning TV series, movies, animation, and
+                  documentaries.</li>
+                <li>The application is built with : <br>
+                  <ul>
+                    <li>React version 17.0.2</li>
+                    <li>Axios version 0.24.0</li>
+                    <li>The Movie Database (TMDB)</li>
+                  </ul>
+                </li>
               </ul>
-            </li>
-              <li>Library <br><ul><li>Axios version 0.24.0</li></ul></li>
-              <li>API <br><ul><li>The Movie Database (TMDB)</li></ul></li>
-            </ul>
-            </p>
-          </div>
-          <div class="resume-item">
-            <a href="https://github.com/alanchrissantony/OLX-Clone"><h4>OLX</h4></a>
-            <h5>Online Marketplace</h5>
-            <p><em>React, Firebase</em></p>
-            <p>
-            <ul>
-              <li>The website resembles a real marketplace, complete with
-                merchandise and the seller’s contact information, where
-                you can sell or purchase anything.</li>
-              <li>The application is built with : <br><ul>
-                <li>React version 17.0.2</li>
-                <li>Firebase version 8.4.3</li>
-                <li>Webpack version 4.42.0</li>
-                <li>Bootstrap version 4.4.1</li>
-                <li>FontAwesome version 5.13.0</li>
-              </ul></li>
-              <li>Features <ul><li>The application displays a virtual marketplace that contains products and contact information.</li>
-              <li>Users can do the following : <br> <ul>
-                <li>Create an account, login or logout</li>
-                <li>Browse available products added by the sellers</li>
-                <li>Add products to the platform, a user must be logged in</li>
-                <li>Display the product</li>
-                <li>The product contains contact information of the seller</li>
-              </ul></li>
-              </ul></li>
-            </ul>
-            </p>
-          </div>
-
-          <div class="resume-item">
-            <a href="https://github.com/alanchrissantony/Ecommerce-ShoppingCart"><h4>ShoppingCart</h4></a>
-            <h5>Ecommerce</h5>
-            <p><em>Node.js, MongoDB</em></p>
-            <p>
-            <ul>
-              <li>A virtual ecommerce website that contains products and
-                allows you to buy them.</li>
-              <li>The application is built with : <br><ul>
-                <li>Node.js version 12.16.3</li>
-                <li>MongoDB version 4.2.0</li>
-                <li>Express version 4.16.1</li>
-                <li>Bootstrap version 4.4.1</li>
-                <li>FontAwesome version 5.13.0</li>
-              </ul></li>
-              <li>Features <ul><li>The application displays an online store that contains products.</li>
-              <li>Users can do the following : <br> <ul>
-                <li>Create an account, login or logout</li>
-                <li>Browse available products added by the admin</li>
-                <li>Add products to the shopping cart, a user must be logged in</li>
-                <li>Delete products from the shopping cart</li>
-                <li>Display the shopping cart</li>
-                <li>The profile contains all the orders a user has made</li>
-              </ul></li>
-              </ul></li>
-            </ul>
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section><!-- End Resume Section -->
-
-  <!-- ======= Projects Section ======= -->
-  <section id="Projects" class="Projects">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Projects</h2>
-        <p>My Projects</p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-            <h4><a href="https://github.com/alanchrissantony/Netflix-Sample-Project">Netflix</a></h4>
-            <p>A streaming service that offers the trailers of a wide
-              variety of award-winning TV shows, movies, anime, documentaries, and more.</p>
+              </p>
+            </div>
+            <div class="resume-item">
+              <a href="https://github.com/alanchrissantony/OLX-Clone">
+                <h4>OLX</h4>
+              </a>
+              <h5>Online Marketplace</h5>
+              <p><em>React, Firebase</em></p>
+              <p>
+              <ul>
+                <li>The website resembles a real marketplace, complete with
+                  merchandise and the seller’s contact information, where
+                  you can sell or purchase anything.</li>
+                <li>The application is built with : <br>
+                  <ul>
+                    <li>React version 17.0.2</li>
+                    <li>Firebase version 8.4.3</li>
+                    <li>Webpack version 4.42.0</li>
+                    <li>Bootstrap version 4.4.1</li>
+                    <li>FontAwesome version 5.13.0</li>
+                  </ul>
+                </li>
+              </ul>
+              </p>
+            </div>
           </div>
         </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-file"></i></div>
-            <h4><a href="https://github.com/alanchrissantony/OLX-Clone">OLX</a></h4>
-            <p>The website resembles a real marketplace, complete with
-              merchandise and the seller’s contact information, where
-              you can sell or purchase anything.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-tachometer"></i></div>
-            <h4><a href="https://github.com/alanchrissantony/Ecommerce-ShoppingCart">ShoppingCart</a></h4>
-            <p>A virtual ecommerce website that contains products and
-              allows you to buy them.</p>
-          </div>
-        </div>
-
-        <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-world"></i></div>
-            <h4><a href="">Amazon</a></h4>
-            <p><h5>Work-in-Progress</h5><br>A virtual ecommerce website that contains products and
-              allows you to buy them.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-slideshow"></i></div>
-            <h4><a href="">Work-in-Progress</a></h4>
-            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-arch"></i></div>
-            <h4><a href="">Work-in-Progress</a></h4>
-            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
-          </div>
-        </div> -->
 
       </div>
+    </section><!-- End My Resume Section -->
 
-    </div>
-  </section><!-- End Projects Section -->
+    <!-- ======= My Projects Section ======= -->
+    <section id="projects" class="services">
+      <div class="container">
 
-  <!-- ======= Portfolio Section ======= -->
-  <!-- <section id="portfolio" class="portfolio">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>My Works</p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-card">Card</li>
-            <li data-filter=".filter-web">Web</li>
-          </ul>
+        <div class="section-title">
+          <span>My Projects</span>
+          <h2>My Projects</h2>
+          <p></p>
         </div>
+
+        <div class="row">
+
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <a href="https://github.com/alanchrissantony/Netflix-Python-Django">
+              <div class="icon-box">
+                <div class="icon"><i class="fa-brands fa-neos"></i></div>
+                <h4 class="title"><a href="https://github.com/alanchrissantony/Netflix-Python-Django">Netflix</a></h4>
+                <p class="description">A streaming service that offers the trailers of a wide variety of award-winning
+                  TV
+                  shows, movies, anime, documentaries, and more.</p>
+              </div>
+            </a>
+          </div>
+
+
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <a href="https://github.com/alanchrissantony/Amazon">
+              <div class="icon-box">
+                <div class="icon"><i class="fa-brands fa-amazon"></i></div>
+                <h4 class="title"><a href="https://github.com/alanchrissantony/Amazon">Amazon</a></h4>
+                <p class="description">Amazon is a online based market that sells books, music, movies, housewares,
+                  electronics, toys, and
+                  many other goods.</p>
+              </div>
+            </a>
+          </div>
+
+
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <a href="https://github.com/alanchrissantony/OLX-Clone">
+              <div class="icon-box">
+                <div class="icon"><i class="fa-solid fa-globe"></i></div>
+                <h4 class="title"><a href="https://github.com/alanchrissantony/OLX-Clone">OLX</a></h4>
+                <p class="description">The website resembles a real marketplace, complete with merchandise and the
+                  seller’s contact information, where you can sell or purchase anything.</p>
+              </div>
+            </a>
+          </div>
+
+
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <a href="https://github.com/alanchrissantony/Ecommerce-ShoppingCart">
+              <div class="icon-box">
+                <div class="icon"><i class="fa-solid fa-bag-shopping"></i></div>
+                <h4 class="title"><a href="https://github.com/alanchrissantony/Ecommerce-ShoppingCart">ShoppingCart</a>
+                </h4>
+                <p class="description">A virtual ecommerce website that contains products and allows you to buy them.
+                </p>
+              </div>
+            </a>
+          </div>
+
+
+        </div>
+
       </div>
+    </section><!-- End My Projects Section -->
 
-      <div class="row portfolio-container">
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container position-relative">
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <a href="https://github.com/alanchrissantony/Netflix-React-Django"><img
+                    src="assets/img/testimonials/netflixlogo.0.0.jpeg" class="testimonial-img" alt=""></a>
+                <a href="https://github.com/alanchrissantony/Netflix-React-Django">
+                  <h3>Netflix</h3>
+                </a>
+                <h4>OTT Streaming Platform ( Python Django, React, MongoDB )</h4>
+                <p>
+                  A streaming service that offers the trailers of a wide variety of award-winning TV shows, movies,
+                  anime, documentaries, and more.
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <a href="https://github.com/alanchrissantony/Amazon"><img
+                    src="assets/img/testimonials/amazon-buy-logo-online-shop-icon-amazon-icon-png-512_512.webp"
+                    class="testimonial-img" alt=""></a>
+                <a href="https://github.com/alanchrissantony/Amazon">
+                  <h3>Amazon</h3>
+                </a>
+                <h4>Ecommerce ( Node.js, MongoDB, React )</h4>
+                <p>
+
+                  Amazon is a online based market that sells books, music, movies, housewares, electronics, toys, and
+                  many other goods.
+
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <a href="https://github.com/alanchrissantony/OLX-Clone"><img src="assets/img/testimonials/Olx.png"
+                    class="testimonial-img" alt=""></a>
+                <a href="https://github.com/alanchrissantony/OLX-Clone">
+                  <h3>Olx</h3>
+                </a>
+                <h4>Online Marketplace ( React, Firebase )</h4>
+                <p>
+
+                  The website resembles a real marketplace, complete with merchandise and the seller’s contact
+                  information, where you can sell or purchase anything.
+
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <a href="https://github.com/alanchrissantony/Netflix-Sample-Project"><img
+                    src="assets/img/testimonials/netflixlogo.0.0.jpeg" class="testimonial-img" alt=""></a>
+                <a href="https://github.com/alanchrissantony/Netflix-Sample-Project">
+                  <h3>Netflix</h3>
+                </a>
+                <h4>OTT Streaming Platform ( React )</h4>
+                <p>
+
+                  A streaming service that offers the trailers of a wide variety of award-winning TV shows, movies,
+                  anime, documentaries, and more. The app provides trailers for a wide range of award-winning TV series,
+                  movies, animation, and documentaries.
+
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <a href="https://github.com/alanchrissantony/Ecommerce-ShoppingCart"><img
+                    src="assets/img/testimonials/Shoppincart.jpg" class="testimonial-img" alt=""></a>
+                <a href="https://github.com/alanchrissantony/Ecommerce-ShoppingCart">
+                  <h3>ShoppingCart</h3>
+                </a>
+                <h4>Ecommerce ( Node.js, MongoDB )</h4>
+                <p>
+
+                  A virtual ecommerce website that contains products and allows you to buy them.
+
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= My Portfolio Section ======= -->
+    <!-- <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <span>My Portfolio</span>
+          <h2>My Portfolio</h2>
+          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+        </div>
+
+        <ul id="portfolio-flters" class="d-flex justify-content-center">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-app">App</li>
+          <li data-filter=".filter-card">Card</li>
+          <li data-filter=".filter-web">Web</li>
+        </ul>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>App 1</h4>
               <p>App</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
+              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>App 2</h4>
               <p>App</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
+              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Card 2</h4>
               <p>Card</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
+              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Web 2</h4>
               <p>Web</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
+              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>App 3</h4>
               <p>App</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
+              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Card 1</h4>
               <p>Card</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
+              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Card 3</h4>
               <p>Card</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
+              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>End My Portfolio Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <!-- <section id="pricing" class="pricing">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Pricing</span>
+          <h2>Pricing</h2>
+          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="box">
+              <h3>Free</h3>
+              <h4><sup>$</sup>0<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li class="na">Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
               </div>
             </div>
           </div>
-        </div>
 
-      </div>
-
-    </div>
-  </section>End Portfolio Section -->
-
-  <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Contact</h2>
-        <p>Contact Me</p>
-      </div>
-
-      <div class="row mt-2">
-
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="info-box">
-            <a href="https://www.google.com/maps/place/Kochi,+Kerala"><i class="bx bx-map"></i></a>
-            <a href="https://www.google.com/maps/place/Kochi,+Kerala"><h3>My Address</h3></a>
-            <a href="https://www.google.com/maps/place/Kochi,+Kerala"><p>Kochi, Kerala, India</p></a>
-          </div>
-        </div>
-
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-share-alt"></i>
-            <h3>Social Profiles</h3>
-            <div class="social-links">
-              <a href="https://github.com/alanchrissantony" class="google-plus"><i class="bi bi-github"></i></a>
-              <a href="https://twitter.com/alanchrisantony" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="https://www.facebook.com/alanchrissantony" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/alanchrissantony" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="https://wa.me/+919496130862" class="google-plus"><i class="bi bi-whatsapp"></i></a>
-              <a href="https://t.me/alanchrissantony" class="google-plus"><i class="bi bi-telegram"></i></a>
-              <a href="https://www.linkedin.com/in/alan-chris-antony-037819223" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+            <div class="box featured">
+              <h3>Business</h3>
+              <h4><sup>$</sup>19<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li>Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
             </div>
           </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+            <div class="box">
+              <h3>Developer</h3>
+              <h4><sup>$</sup>29<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li>Pharetra massa</li>
+                <li>Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+            <div class="box">
+              <span class="advanced">Advanced</span>
+              <h3>Ultimate</h3>
+              <h4><sup>$</sup>49<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li>Pharetra massa</li>
+                <li>Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <a href="mailto:alanchrissantony@gmail.com"><i class="bx bx-envelope"></i></a>
-            <a href="mailto:alanchrissantony@gmail.com"><h3>Email Me</h3></a>
-            <a href="mailto:alanchrissantony@gmail.com"><p>alanchrissantony@gmail.com</p></a>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <a href="https://t.me/alanchrissantony"><i class="bx bxl-telegram"></i></a>
-            <a href="https://t.me/alanchrissantony"><h3>Telegram Me</h3></a>
-            <a href="https://t.me/alanchrissantony"><p>@alanchrissantony</p></a>
-          </div>
-        </div>
       </div>
+    </section>End Pricing Section -->
 
-      <form id="submit-form" action="" method="post" role="form" class="php-email-form mt-4">
+    <!-- ======= Contact Me Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Contact Me</span>
+          <h2>Contact Me</h2>
+          <p></p>
+        </div>
+
         <div class="row">
-          <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-          </div>
-          <div class="col-md-6 form-group mt-3 mt-md-0">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-          </div>
-        </div>
-        <div class="form-group mt-3">
-          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-        </div>
-        <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-        </div>
-        <div class="my-3">
-          <div class="loading">Loading</div>
-          <div class="error-message"></div>
-          <div class="sent-message">Your message has been sent. Thank you!</div>
-        </div>
-        <div class="text-center"><button type="submit" value="submit">Send Message</button></div>
-      </form>
 
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-share-alt"></i>
+                  <h3>Social Profiles</h3>
+                  <div class="social-links">
+                    <a href="https://twitter.com/alanchrisantony" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.facebook.com/alanchrissantony" class="facebook"><i
+                        class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/alanchrissantony" class="instagram"><i
+                        class="bi bi-instagram"></i></a>
+                    <a href="https://github.com/alanchrissantony" class="google-plus"><i class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/alan-chris-antony-037819223" class="linkedin"><i
+                        class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <a href="mailto:alanchrissantony@gmail.com">
+                  <div class="info-box mt-4">
+                    <i class="bx bx-envelope"></i>
+                    <h3>Email Me</h3>
+                    <p>alanchrissantony@gmail.com</p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="https://t.me/alanchrissantony">
+                  <div class="info-box mt-4">
+                    <i class="bx bxl-telegram"></i>
+                    <h3>Telegram Me</h3>
+                    <p>@alanchrissantony</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form id="submit-form" action="" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Me Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Alan Chris Antony</h3>
+      <p>Working as a programmer to make the world a more connected and united place.</p>
+      <div class="social-links">
+        <a href="https://twitter.com/alanchrisantony" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/alanchrissantony" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/alanchrissantony" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://github.com/alanchrissantony" class="google-plus"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/alan-chris-antony-037819223" class="linkedin"><i
+            class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        <span>Copyright </span>&copy; <span><span id="copyright_year"></span> promote. &nbsp All Rights Reserved</span>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/ -->
+        <!-- Designed by <a href="">Alan Chris Antony</a> -->
+      </div>
     </div>
-  </section><!-- End Contact Section -->
+  </footer><!-- End Footer -->
 
-  <div class="credits">
-    <!-- All the links in the footer should remain intact. -->
-    <!-- You can delete the links only if you purchased the pro version. -->
-    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
-    
-  </div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <script>
-      function age() {
-          var d1 = '15';
-          var m1 = '12';
-          var y1 = '2000';
-          var date = new Date();
-          var d2 = date.getDate();
-          var m2 = 1 + date.getMonth();
-          var y2 = date.getFullYear();
-          var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-          if (d1 > d2) {
-              d2 = d2 + month[m2 - 1];
-              m2 = m2 - 1;
+
+    function darkmode(x) {
+
+      function darktheme() {
+        document.body.classList.toggle("dark-theme")
+      }
+      darktheme()
+
+      x.classList.toggle("bi-moon-stars");
+    }
+
+
+  </script>
+
+  <script>
+    function age() {
+      var d1 = '15';
+      var m1 = '12';
+      var y1 = '2000';
+      var date = new Date();
+      var d2 = date.getDate();
+      var m2 = 1 + date.getMonth();
+      var y2 = date.getFullYear();
+      var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      if (d1 > d2) {
+        d2 = d2 + month[m2 - 1];
+        m2 = m2 - 1;
+      }
+      if (m1 > m2) {
+        m2 = m2 + 12;
+        y2 = y2 - 1;
+      }
+      var d = d2 - d1;
+      var m = m2 - m1;
+      var y = y2 - y1;
+      document.getElementById('age').innerHTML = y;
+      document.getElementById('copyright_year').innerHTML = date.getFullYear();
+    }  
+  </script>
+
+  <script>
+
+    window.addEventListener('scroll', function () {
+      if (pageYOffset > 500) {
+        user()
+      }
+    })
+
+    function user() {
+
+      const repos = document.querySelectorAll('.repositories');
+
+      repos.forEach(repo => {
+        repo.innerText = '0'
+
+        const updateRepos = async () => {
+          const datas = await axios.get('https://api.github.com/users/alanchrissantony')
+          const data = datas.data.public_repos
+          const c = +repo.innerText;
+
+          const increment = data / 200;
+
+          if (c < data) {
+            repo.innerText = `${Math.ceil(c + increment)}`
+            setTimeout(updateRepos, 100)
+          } else {
+            repo.innerText = data
           }
-          if (m1 > m2) {
-              m2 = m2 + 12;
-              y2 = y2 - 1;
-          }
-          var d = d2 - d1;
-          var m = m2 - m1;
-          var y = y2 - y1;
-          document.getElementById('age').innerHTML =  y;
-      }  
+        }
+        updateRepos()
+      })
+
+    }
   </script>
 
   <script>
@@ -984,8 +947,14 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
