@@ -1196,6 +1196,9 @@ section {
     transform: rotate(360deg);
   }
 }
+.contact_subtitle_text {
+  font-style: italic;
+}
 
 /*--------------------------------------------------------------
 # Footer
