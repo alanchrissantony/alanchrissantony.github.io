@@ -1097,15 +1097,16 @@ section {
   color: #687683;
   line-height: 1;
   margin: 0 8px;
-  transition: 0.3s;
   padding: 14px;
   border-radius: 50px;
   border: 1px solid #dde1e4;
+  box-shadow: inset 0 0 0 0 var(--primary-color);
+  transition: ease-in-out 0.3s;
 }
 .contact .social-links a:hover {
   color: var(--Secondary-color);
   border-color: var(--primary-color);
-  background: var(--primary-color);
+  box-shadow: inset 48px 0 0 0 var(--primary-color);
 }
 .contact .php-email-form {
   box-shadow: 0 0 30px var(--Contact-box-shadow-color);
