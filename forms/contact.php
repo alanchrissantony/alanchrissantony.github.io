@@ -1,5 +1,5 @@
 <?php
-  /**
+  /**/
  
   $receiving_email_address = 'alanchrissantony@gmail.com';
 
