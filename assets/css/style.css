@@ -1,10 +1,3 @@
-/**
-* Template Name: Laura - v4.7.0
-* Template URL: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -73,6 +66,19 @@ body {
   font-family: "Open Sans", sans-serif;
   color: var(--Secondary-text-color);
   background-color: var(--primary-bg-color);
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(222, 222, 222, .75);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .5);
+  border-radius: 4px;
 }
 
 a {
