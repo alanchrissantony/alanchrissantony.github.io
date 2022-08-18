@@ -66,6 +66,7 @@ body {
   font-family: "Open Sans", sans-serif;
   color: var(--Secondary-text-color);
   background-color: var(--primary-bg-color);
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
