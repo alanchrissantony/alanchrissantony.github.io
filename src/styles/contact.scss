@@ -1,0 +1,658 @@
+.work-list{
+    margin: 4rem -25vw 0 0;
+    padding-right: 1rem;
+
+    li {
+        list-style: none;
+        margin: 0 0 4rem;
+        &:last-child { margin-bottom: 0 }
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        color: var(--light);
+        text-decoration: none;
+
+        img {
+            flex: 0 0 auto;
+            width: 16rem;
+            display: block;
+            margin-right: 2rem;
+        }
+
+        strong {
+            color: var(--purple);
+            font-size: 4rem;
+            line-height: 1.1;
+        }
+
+    }
+}
+
+.work-nav{
+    margin: 20vh 0;
+    width: 100%;
+
+    h3 {
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        color: var(--comment)
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    li {
+        list-style: none;
+    }
+
+    a {
+        color: var(--purple);
+
+        .nav-ico { stroke: var(--purple) }
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .work-list{
+        margin-right: -4rem;
+        padding-right: 0;
+
+        a{
+            img {
+                width: 8rem;
+                margin-right: 2rem;
+            }
+
+            strong {
+                font-size: 3rem;
+            }
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 568px){
+
+    .work-list{
+        margin-right: 0;
+
+        a{
+            display: block;
+
+            img {
+                width: 60%;
+                margin: 0 auto 1rem 0;
+            }
+
+            strong {
+                font-size: 2rem;
+            }
+
+        }
+    }
+
+    .work-nav{
+        ul {
+            display: block;
+        }
+        li {
+            margin-bottom: 1rem;
+        }
+    }
+
+}
+
+    
+main {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  justify-content: end;
+  margin-top: 20rem;
+
+  img{
+    animation-duration: 50s;
+    animation-name: anim-airballoon;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function:linear;
+    
+    animation-fill-mode:forwards;	   
+    display:block;
+    margin:0 auto;
+    transform: translate(500px, 500px);
+  }
+
+  @keyframes anim-airballoon{ 
+    to{
+      transform:translate(-1500px, -100px);
+    }    
+  }
+  .blob {
+      margin: auto;
+      svg {
+          transform-origin: 50% 50%;
+          animation: move 24s ease-in-out infinite;
+          fill: var(--purple);
+        }
+        
+        @keyframes move {
+          0%   { transform: scale(1)   translate(0, 0) rotate(0); filter: drop-shadow( 20px 14px 10px rgba(0, 0, 0, .7)); }
+          25%  { transform: scale(0.8) translate(5vw, 10vh) rotate(55deg); filter: drop-shadow( 14px 14px 6px rgba(0, 0, 0, .7)); }
+          50%  { transform: scale(0.6) translate(15vw, 5vh) rotate(180deg); filter: drop-shadow( -16px -16px 16px rgba(0, 0, 0, .7)); }
+          75%  { transform: scale(0.8) translate(5vw, 10h) rotate(55deg); filter: drop-shadow( 14px 14px 6px rgba(0, 0, 0, .7)); }
+          100% { transform: scale(1)   translate(0, 0) rotate(0); filter: drop-shadow( 20px 14px 10px rgba(0, 0, 0, .7)); }
+        }
+    }
+}
+
+.contact_scene{
+    display:block; 
+    margin:0 auto; 
+    width:300px;
+    height:200px; 
+
+    @media screen and (min-width: 60px){
+        position:absolute;
+        margin-bottom: 0;
+    }
+    @media screen and (min-width: 1025px){
+        position:fixed;
+        margin-top: 10rem;
+    }
+
+    .plane,
+  .cloud{
+    position:absolute;
+  }
+  /*plane animation*/
+  .plane{ 
+    animation-duration: 1s;
+    animation-name: anim-plane;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function:linear;
+    
+    animation-fill-mode:forwards;	   
+    display:block;
+    margin:0 auto;
+    transform: translateY(80px);
+    left:30%;
+  }
+  
+  @keyframes anim-plane{ 
+    to{
+      transform:translateY(95px);
+    }    
+  }
+  
+  
+  /* Cloud Animation */
+  
+  @keyframes fade{
+    0%{ opacity: 0;}
+    10%{ opacity: 1;}
+    90%{ opacity:1;}
+    100%{ opacity:0;}
+  }
+  
+  @keyframes move{  
+    from{ 
+      left:200px; 
+    }
+    to{ 
+      left:0px; 
+    }
+  }
+   
+  
+  .cloud{ 
+    animation-duration:10s; 
+    animation-name:move, fade;
+    animation-direction: normal;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear; 
+    animation-fill-mode:both;	  
+    
+    display:block;
+    background:url(data:image/svg+xml;base64,PHN2ZyBpZD0iY2xvdWQiIHZpZXdCb3g9IjAgMCA1MiA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI1MnB4IiBoZWlnaHQ9IjQwcHgiPgoJPGRlZnM+CgkJPGZpbHRlciBpZD0iZjEiIHg9Ii0xMDAlIiB5PSItMTAwJSIgd2lkdGg9IjMwMCUiIGhlaWdodD0iMzAwJSI+IAoJCQk8ZmVPZmZzZXQgcmVzdWx0PSJvdXQiIGluPSJTb3VyY2VHcmFwaGljIiBkeD0iMCIgZHk9IjEiLz4KCQkJPGZlQ29sb3JNYXRyaXggcmVzdWx0PSJvdXQiIGluPSJvdXQiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgIDAgMCAwIDAgMCAgMCAwIDAgMCAwICAwIDAgMCAwLjQgMCIvPgoJCQk8ZmVHYXVzc2lhbkJsdXIgcmVzdWx0PSJvdXQiIGluPSJvdXQiIHN0ZERldmlhdGlvbj0iMiIvPgoJCQk8ZmVCbGVuZCBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJvdXQiIG1vZGU9Im5vcm1hbCIgcmVzdWx0PSJkcCIvPgoJCTwvZmlsdGVyPgoJPC9kZWZzPiAKCTxwYXRoIGlkPSJmZy1jbG91ZCIgZmlsdGVyPSJ1cmwoI2YxKSIgZD0iTTYuMyAzNS4xQzQuNyAzNC4yLTAuNCAzMi4zIDEuNCAyNSAzLjEgMTguMSA4LjcgMTkuNSA4LjcgMTkuNSA4LjcgMTkuNSAzLjIgMTQuMSAxMC40IDYuOCAxNi45IDAuMiAyMy4xIDQuNiAyMy4xIDQuNiAyMy4xIDQuNiAzMC0xLjcgMzUuMiAyLjQgNDQuNiA5LjcgNDIuOCAyNS4zIDQyLjggMjUuMyA0Mi44IDI1LjMgNDggMjIuNiA0OS44IDI4LjYgNTEgMzIuNyA0NiAzNS44IDQyLjggMzYuNyAzOS43IDM3LjUgOC45IDM2LjYgNi4zIDM1LjFaIiBzdHJva2U9IiNjY2NjY2MiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0iI2ZmZmZmZiIvPgo8L3N2Zz4=);
+    height:40px;
+    width:53px;
+    margin:0 auto;  
+  }
+  .cloud--small{
+    animation-duration:6s; 
+    top:65px;
+    transform: scaleX(0.5) scaleY(0.5); 
+  }
+  .cloud--medium{ 
+    animation-duration:5s;
+    animation-delay:1s;
+    top:95px;
+    transform: scaleX(0.7) scaleY(0.7); 
+  }
+  .cloud--large{
+    animation-duration:4.5s;
+    animation-delay:2.5s;
+    top:95px;
+    transform: scaleX(0.8) scaleY(0.8); 
+  }
+}
+
+.contact-form-section{
+    margin-top: 7rem;
+    width: 3.06in;
+    height: 6.161in;
+    background-image: url(../assets/iphone_6_plus.png);
+
+    .contact-form-container{
+        padding-top: 4.2rem;
+        margin-left: 1rem;
+    }
+}
+.contact-home-button{
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.75rem;
+    cursor: pointer;
+}
+.contact-form{
+    width: 95%;
+    min-height: 28.75rem;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    background-image: url(https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
+
+    form{
+        .form-header{
+            width: 100%;
+            height: 60px;
+            background-color: #128C7E;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-bottom: 1px solid lightgray;
+
+            .avatar{
+                margin-left: 5%;
+                padding-top: .75rem;
+                width: 70%;
+                float: left;
+                p{
+                    float: left;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin-left: 2%;
+                    height: 5px;
+                    color: #ededed;
+                }
+                .contact-header-sub-text{
+                    p{
+                        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        font-size: 12px;
+                        font-weight: 500;
+                        margin-left: 2%;
+                        color: lightgray;
+                        margin-top: -0.25rem;
+                    }
+                }
+                
+                img{
+                    width: 40px;
+                    height: auto;
+                    border-radius: 50%;
+                    float: left;
+                    cursor: pointer;
+                }
+            }
+            .form-header-right{
+                float: left;
+                padding-top: 1rem;
+                .header-icons-video{
+                    float: left;
+                }
+                .header-icons-call{
+                    float: left;
+                    margin-left: 1rem;
+                }
+                .video-icon{
+                    fill: #ededed;
+                    cursor: pointer;
+                    float: left;
+                }
+                .call-icon{
+                    fill: #ededed;
+                    cursor: pointer;
+                    float: left;
+                }
+            }
+        }
+        .form-body{
+            margin: 0.25rem;
+            display: grid;
+            overflow: auto;
+
+            .chat-box{
+                margin: 1rem 0.5rem;
+                overflow: auto;
+                height: 20rem;
+
+                .chat-receive{
+                    color: #202c33;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-size: 12px;
+                    position: relative;
+                    background-color: #ffffff;
+                    padding: 10px;
+                    border-radius: 10px;
+                    width: fit-content;
+                    max-width: 75%;
+                    display: column;
+
+                    span{
+                        display: flex;
+                        float: right;
+                        font-size: xx-small;
+                        color: #202c33;
+                        position: relative;
+                        margin-top: 10px;
+                        margin-left: 10px;
+                    }
+                }
+                .chat-message{
+                    margin-left: auto;
+                    color: #202c33;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-size: 12px;
+                    position: relative;
+                    background-color: #dcf8c6;
+                    padding: 10px;
+                    border-radius: 10px;
+                    width: fit-content;
+                    max-width: 75%;
+                    display: column;
+
+
+                    span{
+                        display: flex;
+                        float: right;
+                        font-size: xx-small;
+                        color: #202c33;
+                        position: relative;
+                        margin-top: 10px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .chat-box::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .contact-form-input{
+                width: 3.06in;
+                margin-top: 21.5rem;
+                position: fixed;
+
+                .contact-icon-emoji{
+                    float: left;
+                    z-index: 1000;
+                    position: absolute;
+                    fill: #757575;
+                    margin-top: .5rem;
+                    margin-left: .5rem;
+                    cursor: pointer;
+                }
+                .contact-icon-attach{
+                    float: left;
+                    z-index: 1000;
+                    position: absolute;
+                    fill: #757575;
+                    margin-top: 0.5rem;
+                    cursor: pointer;
+                    margin-left: 11.25rem;
+                }
+                .form-input{
+                    width: 13.65rem;
+                }
+                textarea{
+                    caret-color: #128C7E;
+                    height: 2.25rem;
+                    background-color: #ededed;
+                    border-radius: 1.5rem;
+                    border: 1px solid lightgray;
+                    outline: none;
+                    padding-top: 0.5rem;
+                    padding-left: 2rem;
+                    padding-right: 2.5rem;
+                    color: #202c33;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-size: 12px;
+                    float: left;
+                    resize: none;
+                    overflow: hidden;
+                }
+                .contact-send-icon{
+                    display: flex;
+                    float: left;
+                    height: 2rem;
+                    width: 2rem;
+                    background-color: #128C7E;
+                    border-radius: 50%;
+                    margin-left: .25rem;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                    cursor: pointer;
+                    -webkit-transition-duration: 0.4s; /* Safari */
+                    transition-duration: 0.4s;
+                    text-decoration: none;
+                    svg{
+                        color: #fff;
+                    }
+                    
+                }
+                .contact-send-icon:after {
+                    content: "";
+                    background: lightgray;
+                    display: block;
+                    position: absolute;
+                    padding-top: 15%;
+                    padding-left: 15%;
+                    border-radius: 50%;
+                    opacity: 0;
+                    transition: all 0.8s
+                }
+                .contact-send-icon:active:after {
+                    padding: 0;
+                    margin: 0;
+                    opacity: 1;
+                    transition: 0s
+                }
+                .contact-send-icon:focus{
+                    outline: lightgray;
+                    border: lightgray;
+                }
+            }
+        }
+    }
+}
+
+// .contact-form{
+//     width: 100%;
+//     min-height: 35rem;
+//     margin-top: 7rem;
+//     border-radius: 2rem;
+//     background-image: url(https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
+
+//     form{
+//         .form-header{
+//             width: 100%;
+//             height: 5rem;
+//             background-color: #128C7E;
+//             border-top-left-radius: 2rem;
+//             border-top-right-radius: 2rem;
+//             border-bottom: 1px solid lightgray;
+
+//             .avatar{
+//                 margin-left: 5%;
+//                 padding-top: 1.25rem;
+//                 p{
+//                     float: left;
+//                     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+//                     font-size: 20px;
+//                     font-weight: 500;
+//                     margin-left: 2%;
+//                     height: 5px;
+//                     color: #ededed;
+//                 }
+//                 span{
+//                     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+//                     font-size: 12px;
+//                     font-weight: 500;
+//                     margin-left: 2%;
+//                     color: lightgray;
+//                 }
+//                 img{
+//                     width: 40px;
+//                     height: auto;
+//                     border-radius: 50%;
+//                     float: left;
+//                 }
+//             }
+//         }
+//         .form-body{
+//             margin: 1rem;
+//             display: flex;
+//             .contact-form-input{
+//                 width: 100%;
+//                 margin-top: 25.5rem;
+//                 position: fixed;
+
+//                 .contact-icon-emoji{
+//                     float: left;
+//                     z-index: 1000;
+//                     position: absolute;
+//                     fill: #757575;
+//                     margin-top: .75rem;
+//                     margin-left: 1rem;
+//                     cursor: pointer;
+//                 }
+//                 .contact-icon-attach{
+//                     float: left;
+//                     z-index: 1000;
+//                     position: absolute;
+//                     fill: #757575;
+//                     margin-top: .75rem;
+//                     cursor: pointer;
+
+//                     @media screen and (min-width: 260px){
+//                         margin-left: 70%;
+//                     }
+//                     @media screen and (min-width: 520px){
+//                         margin-left: 70%;
+//                     }
+//                     @media screen and (min-width: 720px){
+//                         margin-left: 72%;
+//                     }
+//                     @media screen and (min-width: 1080px){
+//                         margin-left: 78%;
+//                     }
+//                     @media screen and (min-width: 1280px){
+//                         margin-left: 78%;
+//                     }
+//                 }
+
+//                 input{
+                    
+//                     height: 3rem;
+//                     background-color: #ededed;
+//                     border-radius: 1.5rem;
+//                     border: 1px solid lightgray;
+//                     outline: none;
+//                     padding-left: 3rem;
+//                     color: #202c33;
+//                     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+//                     font-size: 16px;
+//                     float: left;
+
+                    
+//                     @media screen and (min-width: 260px){
+//                         width: 80%;
+//                         padding-right: 3rem;
+//                     }
+//                     @media screen and (min-width: 520px){
+//                         width: 80%;
+//                         padding-right: 4rem;
+//                     }
+//                     @media screen and (min-width: 720px){
+//                         width: 80%;
+//                         padding-right: 4rem;
+//                     }
+//                     @media screen and (min-width: 1080px){
+//                         width: 85%;
+//                         padding-right: 3rem;
+//                     }
+//                     @media screen and (min-width: 1280px){
+//                         width: 85%;
+//                         padding-right: 3rem;
+//                     }
+//                 }
+//                 .contact-send-icon{
+//                     display: flex;
+//                     float: left;
+//                     height: 3rem;
+//                     width: 3rem;
+//                     background-color: #128C7E;
+//                     border-radius: 50%;
+//                     margin-left: .5rem;
+//                     justify-content: center;
+//                     align-items: center;
+//                     align-content: center;
+
+//                     .Icon_Send{
+//                         margin-top: 5px;
+//                         color: #fff;
+//                     }
+//                 }
+                
+//             }
+//         }
+//     }
+// }
+
+.contact_social_links{
+    float: left;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+.contact_social_links div{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contact_social_links div a{
+    float: left;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+.contact_social_links div a svg{
+    fill: var(--purple);
+    transition: ease-in-out 0.3s;
+}
+.contact_social_links div a svg:hover{
+    fill: var(--header-link);
+}

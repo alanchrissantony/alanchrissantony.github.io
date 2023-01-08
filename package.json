@@ -1,0 +1,29 @@
+{
+  "name": "alan_chr.is",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "gsap": "^2.1.2",
+    "nprogress": "^0.2.0",
+    "scrollmagic": "^2.0.6",
+    "scrollmagic-plugin-gsap": "^1.0.3",
+    "vue": "^2.6.6",
+    "vue-analytics": "^5.16.4",
+    "vue-material-design-icons": "^5.1.2",
+    "vue-router": "^3.0.6"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^3.7.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "sass": "^1.54.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.21",
+    "workbox-webpack-plugin": "^4.3.1"
+  }
+}
