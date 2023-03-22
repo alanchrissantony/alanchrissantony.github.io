@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://alanchrissantony.github.io</loc>
+      <lastmod>2023-03-22</lastmod>
+      <priority>1.0</priority>
+      <title>alan chr.is - Alan Chris Antony - Python Developer</title>
+      <description>Alan Chris Antony is a passionate Python developer and web developer, creating innovative applications and experiences.</description>
+   </url>
+   <url>
+      <loc>https://alanchrissantony.github.io/about</loc>
+      <lastmod>2023-03-22</lastmod>
+      <priority>0.8</priority>
+      <title>alan chr.about - Alan Chris Antony</title>
+      <description>I am a self-taught Python developer who has focused research on software development and technologies to make the world a more connected and unified place.</description>
+   </url>
+   <url>
+      <loc>https://alanchrissantony.github.io/Curriculum_Vitae.pdf</loc>
+      <lastmod>2023-03-22</lastmod>
+      <priority>0.6</priority>
+      <title>Curriculum Vitae - Alan Chris Antony</title>
+      <description>I find it fulfilling to conceive ideas and turn them into tangible results through software development. I am meticulous about ensuring that the architecture, code quality, and overall user experience of my projects are of the highest standard.</description>
+   </url>
+</urlset>
