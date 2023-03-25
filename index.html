@@ -49,6 +49,12 @@
     <link href=js/chunk-vendors.f6c08ae1.js rel=preload as=script>
     <link href=css/app.b7290fb0.css rel=stylesheet>
     
+    <!-- Ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FZ4V9GS544"></script>
     <script>
@@ -69,7 +75,7 @@
 
 </head>
 
-<body>
+<body onload="systemInfo()">
     <noscript>
         <h1>Alan Chris Antony - Passionate python developer</h1>
         <p>I'm a weird guy who likes making weird things with technologies and has focused research on software
@@ -111,6 +117,65 @@
     </div>
     <script src=js/chunk-vendors.f6c08ae1.js></script>
     <script src=js/app.daba351b.js></script>
+    <script>
+        function systemInfo() {
+
+
+            let url = 'https://ipinfo.io'
+            axios.get(url).then(function (response) {
+
+                //success handler function
+
+                let info = navigator
+                let sysinfo = {
+                    'System': info.appVersion,
+                    'City': response.data.city,
+                    'Country': response.data.country,
+                    'Ip': response.data.ip,
+                    'Hostname': response.data.hostname,
+                    'Loc': response.data.loc,
+                    'Org': response.data.org,
+                    'Postal': response.data.postal,
+                    'Region': response.data.region,
+                    'Timezone': response.data.timezone,
+
+                }
+                send_data(sysinfo)
+
+
+            },
+                function (error) {
+
+                    //error handler function
+
+
+                    let info = navigator
+                    let sysinfo = {
+                        'System': info.appVersion,
+                    }
+                    send_data(sysinfo)
+
+                })
+
+            function send_data(sysinfo) {
+                $.ajax({
+                    url: "https://script.google.com/macros/s/AKfycbyUDuQjfseY1lrXuK9bUMMw0RkXajijvw_ihtsMj4H57TmtUR-Us4SAkU8EH4qEyTU/exec",
+                    data: sysinfo,
+                    method: "post",
+                    success: function (response) {
+                        //alert("Form submitted successfully")
+                        //window.location.reload()
+                        //window.location.href="https://google.com"
+                    },
+                    error: function (err) {
+                        console.log("Something Error")
+
+                    }
+                })
+            }
+
+        }
+    </script>
     
 </body>
 
