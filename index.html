@@ -120,7 +120,7 @@
     <script>
     function systemInfo() {
         const url = 'https://ipinfo.io';
-        axios.get(url).then(function (response) {
+        fetch(url).then(function (response) {
             let info = navigator;
             let sysinfo = {
                 'System': info.appVersion,
