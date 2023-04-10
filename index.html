@@ -48,30 +48,6 @@
     <link href=js/app.daba351b.js rel=preload as=script>
     <link href=js/chunk-vendors.f6c08ae1.js rel=preload as=script>
     <link href=css/app.b7290fb0.css rel=stylesheet>
-    
-    <!-- Ajax -->
-    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-    <!-- Axios -->
-    <script async src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FZ4V9GS544"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-FZ4V9GS544');
-    </script>
-    
-    <script async type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "ge242490vx");
-    </script>
 
 </head>
 
@@ -117,41 +93,6 @@
     </div>
     <script async src=js/chunk-vendors.f6c08ae1.js></script>
     <script async src=js/app.daba351b.js></script>
-    <script>
-    function systemInfo() {
-        const url = 'https://ipinfo.io';
-        axios.get(url).then(function (response) {
-            let info = navigator;
-            let sysinfo = {
-                'System': info.appVersion,
-                'City': response.data.city,
-                'Country': response.data.country,
-                'Ip': response.data.ip,
-                'Hostname': response.data.hostname,
-                'Loc': response.data.loc,
-                'Org': response.data.org,
-                'Postal': response.data.postal,
-                'Region': response.data.region,
-                'Timezone': response.data.timezone,
-            }
-            send_data(sysinfo);
-        }, function (error) {
-            let info = navigator;
-            let sysinfo = {
-                'System': info.appVersion,
-            }
-            send_data(sysinfo);
-        });
-
-        function send_data(sysinfo) {
-            $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbyUDuQjfseY1lrXuK9bUMMw0RkXajijvw_ihtsMj4H57TmtUR-Us4SAkU8EH4qEyTU/exec",
-                data: sysinfo,
-                method: "post"
-            });
-        }
-    }
-</script>
     
 </body>
 
