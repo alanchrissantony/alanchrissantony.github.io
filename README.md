@@ -16,23 +16,12 @@
   
 <div style="display: inline_block"><br>
   <h2>Hard Skills</h2>
-  <img align="center" alt="Leo-HTML" height="40" width="40" src="https://imgur.com/UCSmwlz.png">
-  <img align="center" alt="Leo-HTML" height="60" width="60" src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Kali-dragon-icon.svg">
-    <img align="center" alt="Leo-HTML" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-  <img align="center" alt="Leo-HTML" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
-      <img align="center" alt="Leo-CSS" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-        <img align="center" alt="Leo-Js" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-  <img align="center" alt="Leo-AngularJS" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">
-  <img align="center" alt="Leo-AngularJS" height="40" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg">
-  <img align="center" alt="Leo-HTML" height="48" width="auto" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png">
-       <img align="center" alt="Leo-AngularJS" height="40" width="40" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png">
+  <a href="https://github.com/alanchrissantony">
+  <img src="https://skillicons.dev/icons?i=py,linux,html,react,css,js,git,django,firebase,nodejs" />
   
   <h2>Interesses</h2>
-   <img align="center" alt="Leo-AngularJS" height="45" width="45" src="https://cdn.iconscout.com/icon/free/png-512/c-programming-569564.png">
-  <img align="center" alt="Leo-React" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg">
-  <img align="center" alt="Leo-AWS" height="40" width="40" src="https://imgur.com/f3b7uly.png" alt="c++">
-  <img align="center" alt="Leo-Java" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg">
-  <img align="center" alt="Leo-Canva" height="50" width="50" src="https://imgur.com/fnn6xC4.png">
+    <a href="https://github.com/alanchrissantony">
+   <img src="https://skillicons.dev/icons?i=c,angular,cpp,java,ps" />
 </div>
   
  
